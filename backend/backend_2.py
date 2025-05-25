@@ -13,6 +13,9 @@ import pandas as pd
 import google.generativeai as genai
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
+from dotenv import load_dotenv
+
+load_dotenv()  # Load .env into environment variables
 
 app_2 = FastAPI()
 
@@ -30,7 +33,7 @@ META_FILE = "meta.parquet"
 
 # Load metadata and models
 meta = pd.read_parquet(META_FILE)
-genai.configure(api_key="AIzaSyCYXaIedN0JEmOYjStfdHe5VZdhXOx4y0E")
+genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 gemini_model = genai.GenerativeModel("gemini-2.0-flash")
 sbert_model = SentenceTransformer("all-MiniLM-L6-v2")
 

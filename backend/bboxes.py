@@ -6,9 +6,12 @@ import google.generativeai as genai
 from typing import List
 from PIL import Image
 from io import BytesIO
+from dotenv import load_dotenv
+
+load_dotenv()  # Load .env into environment variables
 
 # Configure Gemini (secure this key in production)
-genai.configure(api_key="AIzaSyCYXaIedN0JEmOYjStfdHe5VZdhXOx4y0E")  # Use os.getenv() in production
+genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 model = genai.GenerativeModel("gemini-2.0-flash")
 

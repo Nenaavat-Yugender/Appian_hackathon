@@ -10,11 +10,15 @@ from io import BytesIO
 from pathlib import Path
 import google.generativeai as genai
 import cv2 # Ensure cv2 is imported for the drawing function
+from dotenv import load_dotenv
+
+load_dotenv()  # Load .env into environment variables
 
 # === Setup Gemini ===
 # It's highly recommended to use environment variables for API keys in production
 # genai.configure(api_key=os.environ.get("GEMINI_API_KEY"))
-genai.configure(api_key="AIzaSyCYXaIedN0JEmOYjStfdHe5VZdhXOx4y0E")
+genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
+
 model = genai.GenerativeModel("gemini-2.0-flash")
 
 # === Load CLIP model and fashion dataset embeddings/meta ===

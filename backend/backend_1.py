@@ -11,6 +11,11 @@ import os
 import pandas as pd
 import google.generativeai as genai
 from similarity_search_1 import find_similar_fashion_items_with_preferences
+from dotenv import load_dotenv
+
+load_dotenv()  # Load .env into environment variables
+
+
 
 app_1 = FastAPI()
 
@@ -37,7 +42,7 @@ user_preferences = {
 }
 
 # Setup Gemini
-genai.configure(api_key="AIzaSyCYXaIedN0JEmOYjStfdHe5VZdhXOx4y0E")
+genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 model = genai.GenerativeModel("gemini-2.0-flash")
 
 class ImageRequest(BaseModel):

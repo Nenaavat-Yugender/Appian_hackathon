@@ -8,6 +8,9 @@ import os
 import json
 from PIL import Image
 from io import BytesIO
+from dotenv import load_dotenv
+
+load_dotenv()  # Load .env into environment variables
 
 app_0 = FastAPI()
 
@@ -21,8 +24,8 @@ app_0.add_middleware(
 )
 
 # Setup Gemini API
-GEMINI_API_KEY = "AIzaSyCYXaIedN0JEmOYjStfdHe5VZdhXOx4y0E"
-genai.configure(api_key=GEMINI_API_KEY)
+
+genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 model = genai.GenerativeModel("gemini-1.5-flash")
 
 

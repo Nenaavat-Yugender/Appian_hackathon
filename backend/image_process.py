@@ -1,6 +1,11 @@
 import google.generativeai as genai
+from dotenv import load_dotenv
 
-client = genai.configure(api_key="AIzaSyCYXaIedN0JEmOYjStfdHe5VZdhXOx4y0E")
+load_dotenv()  # Load .env into environment variables
+
+
+client = genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
+
 model = genai.GenerativeModel(model="gemini-2.0-flash")
 # Upload the first image
 image1_path = "/content/pexels-jimmyjimmy-1484807.jpg"

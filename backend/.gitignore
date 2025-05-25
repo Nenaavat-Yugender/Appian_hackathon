@@ -2,9 +2,11 @@
 # Python cache
 __pycache__/
 *.pyc
+.env
 
 # Model files
 *.pt
+
 
 # NumPy binary files
 *.npy
