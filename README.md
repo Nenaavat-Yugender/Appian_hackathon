@@ -98,3 +98,16 @@ python-multipart==0.0.9
 aiofiles==23.2.1
 jinja2==3.1.3
 requests==2.31.0
+
+---
+
+## License & Copyright
+
+© 2025 Team KATY (Taher, Yugandar, Asim, Karthikey), IIT Madras. All rights reserved.
+
+This project and its contents are the intellectual property of Team KATY.  
+Unauthorized copying, distribution, or modification of this project or its parts is prohibited without prior written permission.
+
+For inquiries or permission requests, please contact the project maintainers.
+
+---
