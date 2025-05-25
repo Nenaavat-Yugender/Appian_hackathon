@@ -61,3 +61,39 @@ A strategy was designed but not implemented due to time constraints:
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/Nenaavat-Yugender/Appian_hackathon
+
+
+---
+
+## 📦 Python Dependencies
+
+### Make sure you have Python 3.9+ installed. Install the dependencies using:
+```bash
+pip install -r requirements.txt
+
+---
+
+```txt
+# Core Python server
+fastapi==0.110.0
+uvicorn==0.27.1
+
+# CLIP and Vision Models
+git+https://github.com/openai/CLIP.git
+torch==2.2.0
+torchvision==0.17.0
+
+# Image processing
+Pillow==10.3.0
+
+# FAISS for similarity search
+faiss-cpu==1.7.4
+
+# Sentence Embeddings (for prompt handling)
+sentence-transformers==2.6.1
+
+# CORS (for frontend-backend communication)
+python-multipart==0.0.9
+aiofiles==23.2.1
+jinja2==3.1.3
+requests==2.31.0
