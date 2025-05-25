@@ -99,6 +99,8 @@ aiofiles==23.2.1
 jinja2==3.1.3
 requests==2.31.0
 
+```
+
 ---
 
 ## License & Copyright
