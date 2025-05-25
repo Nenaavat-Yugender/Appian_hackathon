@@ -72,7 +72,7 @@ git clone https://github.com/Nenaavat-Yugender/Appian_hackathon
 ```bash
 pip install -r requirements.txt
 
----
+```
 
 ```txt
 # Core Python server
