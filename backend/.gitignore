@@ -1,0 +1,32 @@
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Model files
+*.pt
+
+# NumPy binary files
+*.npy
+*.npz
+
+# Parquet files
+*.parquet
+
+# Image files
+*.jpg
+*.jpeg
+*.png
+
+# Zip archives
+*.zip
+
+# Output / result files
+annotated_output.jpg
+temp_input.jpg
+fashion_img.jpg
+shirt.jpg
+pexels-*.jpg
+
+# IDE settings (optional)
+.vscode/
